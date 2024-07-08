@@ -16,3 +16,6 @@ You can install Pygame using pip:<br>
 * Run the script:<br>
 ```python3 tictactoe.py```
 * Enjoy!
+
+
+***This game is not yet completed!!***
