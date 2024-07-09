@@ -121,11 +121,6 @@ def draw_text(text: str, font: pygame.font.Font, color: tuple, x: int, y: int):
     text_surface = font.render(text, True, color)
     screen.blit(text_surface, (x, y))
 
-def draw_intro():
-    screen.fill("white")
-    draw_text("Welcome to Tic-Tac-Toe!", message_font, (255, 0, 0), 200, 300)
-    draw_text("Press Enter to Begin.", message_font, (255, 0, 0), 220, 340)
-
 def draw_winner(winner:str):
     '''
     Function to draw the winner screen
@@ -140,7 +135,7 @@ def draw_tie():
     Function to draw a tie screen
     '''
     screen.fill("white")
-    draw_text("It's a tie!", message_font, (255, 0, 0), 200, 300)
+    draw_text("It's a tie!", message_font, (255, 0, 0), 300, 300)
     draw_text("Press Enter to Restart.", message_font, (255, 0, 0), 220, 340)
 
 # ========================
@@ -177,10 +172,14 @@ while running:
     if winner is not None:
         if winner == 'Tie':
             draw_tie()
+            player_turn = 'X'
+            game_over = True
         else:
             draw_winner(winner)
             if player_turn == 'O':
                 player_turn = 'X'
+            game_over = True
+            game_started = False
         if event.type == pygame.KEYDOWN and event.key == pygame.K_RETURN:
             game_over = False
             game_started = True
