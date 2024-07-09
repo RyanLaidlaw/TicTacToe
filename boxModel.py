@@ -1,4 +1,10 @@
 class Box:
+    """
+    Represents a single box in the Tic-Tac-Toe board.
+
+    Attributes:
+        content (str): The content of the box ('X', 'O', or None).
+    """
     def __init__(self):
         self.content = None 
 
