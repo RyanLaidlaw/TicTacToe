@@ -18,4 +18,4 @@ You can install Pygame using pip:<br>
 * Enjoy!
 
 
-***More Features May Be Implemented In The future!!***
+***More Features May Be Implemented In The Future!!***
